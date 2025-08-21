@@ -1183,7 +1183,10 @@ export default function PhotoScreensaver() {
             {photo.blobUrl ? (
               <div
                 className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${photo.blobUrl})` }}
+               style={{
+                  backgroundImage: `url(${photo.blobUrl})`,
+                  backgroundPosition: "center 15%", // Use backgroundPosition instead
+                }}
               />
             ) : (
               <Image
@@ -1196,6 +1199,9 @@ export default function PhotoScreensaver() {
                   gridDimensions.cellHeight
                 )}px`}
                 priority={false}
+                style={{
+                  objectPosition: "center 15%", // This works for Image component
+                }}
               />
             )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-white/5" />
