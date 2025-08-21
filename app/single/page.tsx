@@ -399,9 +399,10 @@ const PhotoLoop = () => {
           <img
             src={currentPhoto.imageUrl}
             alt={`Photo from ${currentPhoto.outletName} - ${currentPhoto.retailerName}`}
-            className="w-full h-full object-cover object-center rounded-lg shadow-2xl"
+            className="w-full h-full object-cover rounded-lg shadow-2xl"
             style={{
               filter: "drop-shadow(0 0 30px rgba(255, 255, 255, 0.3))",
+              objectPosition: "center 15%",
             }}
           />
           <div className=" absolute text-center bottom-0 left-1/2 -translate-x-1/2 z-10 flex flex-col justify-end pb-10  h-32 bg-gradient-to-t from-violet-900 to-transparent w-full rounded-b-md">
